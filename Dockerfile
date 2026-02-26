@@ -23,7 +23,7 @@ COPY . .
 # ── Pre-download the model so the container starts instantly ─────────
 # This bakes the model weights into the image.  Remove these two lines
 # if you prefer to mount the model at runtime instead.
-RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
+RUN python -c "from fastembed import TextEmbedding; TextEmbedding('sentence-transformers/all-MiniLM-L6-v2')"
 
 # ── Runtime configuration ────────────────────────────────────────────
 # Render injects a PORT env var; fall back to 8100 for local use.
