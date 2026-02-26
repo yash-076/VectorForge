@@ -123,16 +123,3 @@ If `API_KEY` is **not** set, authentication is disabled and all requests are all
 
 Once running, visit **http://localhost:8100/docs** for the auto-generated Swagger UI.
 
-## Deploy to Render
-
-1. **Push this repo to GitHub.**
-
-2. **Connect to Render** — go to [render.com/new](https://render.com/new), select your repo, and Render will auto-detect the `render.yaml` blueprint.
-
-3. **Set the `API_KEY`** — Render will prompt you to enter the value for the `API_KEY` secret during setup.
-
-4. **Deploy** — Render builds the Docker image and starts the service. The first deploy takes a few minutes (model download + pip install). Subsequent deploys use cached layers.
-
-Your service will be available at `https://vectorforge-embedding.onrender.com`.
-
-> **Note:** On Render's free/starter tier the service may spin down after inactivity. The first request after a cold start will take longer while the model loads.

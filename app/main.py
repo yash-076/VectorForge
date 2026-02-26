@@ -152,8 +152,9 @@ async def embed_batch(
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
 
-@app.get(
+@app.api_route(
     "/health",
+    methods=["GET", "HEAD"],
     response_model=HealthResponse,
     summary="Health check",
 )
