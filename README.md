@@ -2,6 +2,8 @@
 
 A lightweight FastAPI service that generates semantic vector embeddings using **sentence-transformers/all-MiniLM-L6-v2**.
 
+**Live:** [https://vectorforge-zm4r.onrender.com](https://vectorforge-zm4r.onrender.com)
+
 ## Project Structure
 
 ```

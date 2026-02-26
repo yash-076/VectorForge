@@ -152,6 +152,12 @@ async def embed_batch(
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
 
+@app.api_route("/", methods=["GET", "HEAD"], summary="Root")
+async def root():
+    """Simple liveness probe."""
+    return {"message": "ok, server is live"}
+
+
 @app.api_route(
     "/health",
     methods=["GET", "HEAD"],
