@@ -1,8 +1,16 @@
-# Embedding Microservice
+<p align="center">
+  <img src="public/vectorForge.png" alt="VectorForge Logo" width="200" />
+</p>
 
-A lightweight FastAPI service that generates semantic vector embeddings using **sentence-transformers/all-MiniLM-L6-v2**.
+<h1 align="center">VectorForge</h1>
 
-**Live:** [https://vectorforge-zm4r.onrender.com](https://vectorforge-zm4r.onrender.com)
+<p align="center">
+  A lightweight FastAPI service that generates semantic vector embeddings using <b>sentence-transformers/all-MiniLM-L6-v2</b>.
+</p>
+
+<p align="center">
+  <a href="https://vectorforge-zm4r.onrender.com"><b>Live Demo</b></a>
+</p>
 
 ## Project Structure
 
@@ -13,6 +21,8 @@ VectorForge/
 │   ├── schemas.py                 # Pydantic request/response models
 │   └── services/
 │       └── embedding_service.py   # Core embedding logic (SentenceTransformer)
+├── public/
+│   └── vectorForge.png             # Project logo
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
