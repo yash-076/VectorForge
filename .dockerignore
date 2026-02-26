@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+
+# Environment variables (secrets)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Docs (not needed in the image)
+README.md
+render.yaml

@@ -1,0 +1,21 @@
+# render.yaml — Render Blueprint (Infrastructure as Code)
+# https://render.com/docs/blueprint-spec
+#
+# Push this repo to GitHub and connect it to Render.  Render will read
+# this file and provision the service automatically.
+
+services:
+  - type: web
+    name: vectorforge-embedding
+    runtime: docker
+    region: oregon                      # Choose: oregon, ohio, frankfurt, singapore
+    plan: starter                       # starter plan gives 512 MB RAM — enough for MiniLM-L6-v2
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: API_KEY
+        sync: false                     # Render will prompt you to enter the value in the dashboard
+      - key: MODEL_NAME
+        value: sentence-transformers/all-MiniLM-L6-v2
+      - key: DEVICE
+        value: cpu
+    healthCheckPath: /health
