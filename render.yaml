@@ -18,4 +18,3 @@ services:
         value: sentence-transformers/all-MiniLM-L6-v2
       - key: DEVICE
         value: cpu
-    healthCheckPath: /health
